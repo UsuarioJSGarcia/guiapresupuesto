@@ -1,8 +1,8 @@
 """Diagnóstico financiero y plan de pago de deudas.
 
 Uso:
-    python3 planificador.py                 # diagnóstico + escenarios
-    python3 planificador.py 3500000         # simula pagar 3.5M/mes a deudas
+    python3 planificador.py             # diagnóstico + escenarios
+    python3 planificador.py 3500000     # simula destinar 3,5M/mes a deudas
 
 Edita datos.json con tus números reales y vuelve a correrlo.
 """
@@ -14,133 +14,156 @@ DATOS = json.loads((Path(__file__).parent / "datos.json").read_text(encoding="ut
 
 
 def cop(x):
-    return "$" + f"{x:,.0f}".replace(",", ".")
+    return ("-" if x < 0 else "") + "$" + f"{abs(x):,.0f}".replace(",", ".")
 
 
 def tasa_ea(mensual):
     return (1 + mensual) ** 12 - 1
 
 
-def simular(deudas, pago_mensual, orden="avalancha", max_meses=600):
-    """Cada mes: se causan intereses, se paga el interés de todas y el resto
-    se lleva completo a una deuda objetivo (avalancha = mayor tasa,
-    bola de nieve = menor saldo). Devuelve (meses, interes_total, fechas_salida)."""
-    saldos = {d["nombre"]: d["saldo"] for d in deudas}
-    tasas = {d["nombre"]: d["tasa_mensual"] for d in deudas}
-    interes_total = 0.0
-    salida = {}
-    for mes in range(1, max_meses + 1):
-        disponible = pago_mensual
-        for n in saldos:
-            if saldos[n] > 0:
-                i = saldos[n] * tasas[n]
-                saldos[n] += i
-                interes_total += i
-        vivas = [n for n in saldos if saldos[n] > 0.5]
-        if orden == "avalancha":
-            vivas.sort(key=lambda n: -tasas[n])
-        else:
-            vivas.sort(key=lambda n: saldos[n])
-        # Primero cubrir intereses de todas (para que ninguna crezca)
-        for n in vivas:
-            pago = min(saldos[n] * tasas[n] / (1 + tasas[n]), disponible)
-            saldos[n] -= pago
-            disponible -= pago
-        # El sobrante va a la deuda objetivo, en orden
-        for n in vivas:
-            pago = min(saldos[n], disponible)
-            saldos[n] -= pago
-            disponible -= pago
-            if saldos[n] <= 0.5 and n not in salida:
-                salida[n] = mes
-        if all(s <= 0.5 for s in saldos.values()):
-            return mes, interes_total, salida
-    return None, interes_total, salida
-
-
 def cuota_credito(monto, tasa_mensual, meses):
     return monto * tasa_mensual / (1 - (1 + tasa_mensual) ** -meses)
 
 
+def simular(deudas, pago_mensual, orden="avalancha", max_meses=600):
+    """Mes a mes: se causan intereses; cada deuda recibe su mínimo (la cuota
+    fija si es un crédito, o el interés si es préstamo de persona); lo que sobra
+    va completo a la deuda objetivo (avalancha = mayor tasa, bola = menor saldo).
+    Devuelve (meses_hasta_cero o None, interes_total, {deuda: mes_pagada})."""
+    saldo = {d["nombre"]: float(d["saldo"]) for d in deudas}
+    tasa = {d["nombre"]: d["tasa_mensual"] for d in deudas}
+    cuota = {d["nombre"]: d.get("cuota_fija") for d in deudas}
+    interes_total = 0.0
+    salida = {}
+    for mes in range(1, max_meses + 1):
+        disponible = pago_mensual
+        intereses_mes = {}
+        for n in saldo:
+            i = saldo[n] * tasa[n] if saldo[n] > 0 else 0.0
+            intereses_mes[n] = i
+            saldo[n] += i
+            interes_total += i
+        vivas = [n for n in saldo if saldo[n] > 0.5]
+        vivas.sort(key=(lambda n: -tasa[n]) if orden == "avalancha" else (lambda n: saldo[n]))
+        for n in vivas:
+            minimo = cuota[n] if cuota[n] else intereses_mes[n]
+            pago = min(minimo, saldo[n], disponible)
+            saldo[n] -= pago
+            disponible -= pago
+        for n in vivas:
+            pago = min(saldo[n], disponible)
+            saldo[n] -= pago
+            disponible -= pago
+        for n in vivas:
+            if saldo[n] <= 0.5 and n not in salida:
+                salida[n] = mes
+        if all(s <= 0.5 for s in saldo.values()):
+            return mes, interes_total, salida
+    return None, interes_total, salida
+
+
+def flujo_caja(recortes=False):
+    libre = sum(i["monto"] for i in DATOS["ingresos"] if i["libre_uso"])
+    bono = sum(i["monto"] for i in DATOS["ingresos"] if not i["libre_uso"])
+    g_efectivo = sum(g["monto"] for g in DATOS["gastos_fijos"] if g["medio"] == "efectivo")
+    g_bono = sum(g["monto"] for g in DATOS["gastos_fijos"] if g["medio"] == "bono")
+    ahorro = sum(r["ahorro"] for r in DATOS.get("recortes_posibles", [])) if recortes else 0
+    return libre, bono, g_efectivo - ahorro, g_bono
+
+
+def deudas_con_banco(monto, tasa, plazo):
+    """Usa el crédito para pagar primero las deudas con personas más caras.
+    La tarjeta no se recoge (se paga aparte con el flujo libre)."""
+    personas = sorted([d for d in DATOS["deudas"] if "Tarjeta" not in d["nombre"]],
+                      key=lambda d: -d["tasa_mensual"])
+    resto = monto
+    nuevas = []
+    for d in personas:
+        usado = min(resto, d["saldo"])
+        resto -= usado
+        if d["saldo"] - usado > 0:
+            nuevas.append({**d, "saldo": d["saldo"] - usado})
+    nuevas += [d for d in DATOS["deudas"] if "Tarjeta" in d["nombre"]]
+    c = cuota_credito(monto, tasa, plazo)
+    nuevas.append({"nombre": f"Banco {monto / 1e6:.0f}M", "saldo": monto,
+                   "tasa_mensual": tasa, "cuota_fija": c})
+    return nuevas, c
+
+
 def diagnostico():
-    ing = DATOS["ingresos"]
     deudas = DATOS["deudas"]
-    total_ing = sum(i["monto"] for i in ing)
-    libre = sum(i["monto"] for i in ing if i["libre_uso"])
-    gastos = sum(g["monto"] for g in DATOS["gastos_fijos"])
+    libre, bono, g_ef, g_bono = flujo_caja()
     total_deuda = sum(d["saldo"] for d in deudas)
     interes_mes = sum(d["saldo"] * d["tasa_mensual"] for d in deudas)
+    disponible = libre - g_ef
 
-    print("=" * 70)
+    print("=" * 72)
     print("DIAGNÓSTICO FINANCIERO")
-    print("=" * 70)
-    print(f"Ingreso total mensual:        {cop(total_ing)}")
-    print(f"  de libre uso (Bancolombia): {cop(libre)}")
-    print(f"  tarjeta bono:               {cop(total_ing - libre)}")
-    print(f"Gastos fijos registrados:     {cop(gastos)}"
-          + ("   <-- FALTAN DATOS" if gastos == 0 else ""))
-    print(f"Deuda total:                  {cop(total_deuda)}")
-    print(f"  = {total_deuda / total_ing:.1f} meses de ingreso completo")
-    print(f"Intereses que genera al mes:  {cop(interes_mes)}")
-    print(f"  = {interes_mes / total_ing:.0%} del ingreso total, "
-          f"{interes_mes / libre:.0%} del dinero de libre uso")
-    print(f"  = {cop(interes_mes * 12)} al año solo en intereses")
+    print("=" * 72)
+    print(f"Ingreso neto mensual:          {cop(libre + bono)}")
+    print(f"  Bancolombia (libre uso):     {cop(libre)}")
+    print(f"  Tarjeta bono:                {cop(bono)}")
+    print(f"Gastos que salen de Bancolombia: {cop(g_ef)}")
+    print(f"Gastos pagados con bono:       {cop(g_bono)}  (sobra en bono: {cop(bono - g_bono)})")
+    print(f"Queda en Bancolombia para deudas: {cop(disponible)}")
     print()
-    print(f"{'Deuda':32} {'Saldo':>14} {'Tasa mes':>9} {'Tasa E.A.':>10} {'Interés/mes':>13}")
+    print(f"Deuda total:                   {cop(total_deuda)}")
+    print(f"Intereses que genera al mes:   {cop(interes_mes)}  "
+          f"({interes_mes / (libre + bono):.0%} del ingreso)")
+    print(f"Balance mensual (si solo pagas intereses): {cop(disponible - interes_mes)}")
+    print()
+    print(f"{'Deuda':40} {'Saldo':>13} {'Tasa mes':>9} {'E.A.':>7} {'Interés/mes':>12}")
     for d in sorted(deudas, key=lambda d: -d["tasa_mensual"]):
-        print(f"{d['nombre']:32} {cop(d['saldo']):>14} {d['tasa_mensual']:>9.2%} "
-              f"{tasa_ea(d['tasa_mensual']):>10.1%} {cop(d['saldo'] * d['tasa_mensual']):>13}")
-    return total_deuda, interes_mes
+        print(f"{d['nombre']:40} {cop(d['saldo']):>13} {d['tasa_mensual']:>9.2%} "
+              f"{tasa_ea(d['tasa_mensual']):>7.1%} {cop(d['saldo'] * d['tasa_mensual']):>12}")
+    return disponible
 
 
-def escenarios(pagos):
-    deudas = DATOS["deudas"]
+def escenarios_sin_banco(pagos):
     print()
-    print("=" * 70)
-    print("PLAN DE PAGO (pagando el interés de todas + el extra a una)")
-    print("=" * 70)
-    print(f"{'Pago mensual':>14} | {'Avalancha (mayor tasa)':^28} | {'Bola de nieve (menor saldo)':^28}")
+    print("=" * 72)
+    print("A) SIN CRÉDITO BANCARIO: avalancha con las deudas actuales")
+    print("=" * 72)
     for p in pagos:
-        fila = []
-        for orden in ("avalancha", "bola"):
-            meses, interes, _ = simular(deudas, p, orden)
-            fila.append("nunca se paga" if meses is None
-                        else f"{meses:3d} meses, int {cop(interes)}")
-        print(f"{cop(p):>14} | {fila[0]:^28} | {fila[1]:^28}")
+        meses, interes, _ = simular(DATOS["deudas"], p)
+        txt = "NUNCA se paga (la deuda crece o no baja)" if meses is None \
+            else f"{meses} meses ({meses / 12:.1f} años), intereses {cop(interes)}"
+        print(f"  {cop(p):>12}/mes -> {txt}")
 
 
-def orden_avalancha(pago):
-    meses, interes, salida = simular(DATOS["deudas"], pago, "avalancha")
+def escenarios_con_banco(pagos):
+    cb = DATOS["credito_banco"]
     print()
-    print(f"Detalle avalancha pagando {cop(pago)}/mes:")
-    for n, m in sorted(salida.items(), key=lambda x: x[1]):
-        print(f"  mes {m:3d}: queda pagada -> {n}")
-    if meses:
-        print(f"  Libre de deudas en {meses} meses ({meses / 12:.1f} años). "
-              f"Intereses totales: {cop(interes)}")
-
-
-def refinanciacion(total_deuda, interes_mes):
-    print()
-    print("=" * 70)
-    print("ESCENARIO: CAMBIAR TODA LA DEUDA POR UN CRÉDITO BANCARIO")
-    print("=" * 70)
-    print("(tasas de referencia aproximadas; confirmar con el banco)")
-    for nombre, tasa in (("Libranza ~1,3% m.v.", 0.013),
-                         ("Libre inversión ~1,8% m.v.", 0.018)):
-        for plazo in (48, 60, 72):
-            c = cuota_credito(total_deuda, tasa, plazo)
-            print(f"  {nombre:28} {plazo} meses: cuota {cop(c)}, "
-                  f"interés total {cop(c * plazo - total_deuda)}")
-    print(f"  Hoy: {cop(interes_mes)}/mes solo de intereses, sin bajar capital.")
+    print("=" * 72)
+    print(f"B) CON CRÉDITO BANCARIO DE {cop(cb['monto'])} a {cb['plazo_meses']} meses")
+    print("   (recoge las deudas con personas más caras; lo demás se paga en avalancha")
+    print("    y cuando todo lo demás se acaba, el sobrante se abona al banco)")
+    print("=" * 72)
+    for tasa in cb["tasas_a_evaluar"]:
+        deudas, c = deudas_con_banco(cb["monto"], tasa, cb["plazo_meses"])
+        print(f"  Tasa {tasa:.2%} m.v. ({tasa_ea(tasa):.1%} E.A.): cuota banco {cop(c)}")
+        for p in pagos:
+            meses, interes, salida = simular(deudas, p)
+            if meses is None:
+                print(f"     {cop(p):>12}/mes -> no alcanza")
+                continue
+            libres = [f"{n} mes {m}" for n, m in sorted(salida.items(), key=lambda x: x[1])
+                      if not n.startswith("Banco")]
+            print(f"     {cop(p):>12}/mes -> libre en {meses} meses ({meses / 12:.1f} años), "
+                  f"intereses {cop(interes)}")
+            print(f"{'':22}orden: " + "; ".join(libres))
 
 
 if __name__ == "__main__":
-    total, interes = diagnostico()
+    disponible = diagnostico()
+    _, _, g_ef_rec, _ = flujo_caja(recortes=True)
+    libre = flujo_caja()[0]
+    disponible_rec = libre - g_ef_rec
     if len(sys.argv) > 1:
         pagos = [float(a) for a in sys.argv[1:]]
     else:
-        pagos = [2_900_000, 3_200_000, 3_500_000, 4_000_000, 4_500_000]
-    escenarios(pagos)
-    orden_avalancha(pagos[len(pagos) // 2] if len(sys.argv) == 1 else pagos[0])
-    refinanciacion(total, interes)
+        pagos = sorted({round(disponible), round(disponible_rec)})
+        print(f"\nCon recortes ({', '.join(r['nombre'] for r in DATOS['recortes_posibles'])}): "
+              f"quedan {cop(disponible_rec)} para deudas.")
+    escenarios_sin_banco(pagos)
+    escenarios_con_banco(pagos)

@@ -1,91 +1,79 @@
 # Diagnóstico financiero y plan de salida de deudas
 
-*Actualizado: 14 de octubre de 2026. Los números salen de `python3 planificador.py`.*
+*Actualizado: 20 de octubre de 2026. Los números salen de `python3 planificador.py`.*
 
-## 1. Situación actual
+## 1. Flujo de caja mensual
 
-| Concepto | Valor |
-|---|---|
-| Ingreso laboral mensual | **$5.900.000** |
-| – llega a Bancolombia (libre uso) | $4.500.000 |
-| – tarjeta bono (solo compras; retirar cuesta ~$5.000) | $1.400.000 |
-| Deuda total | **$84.000.000** (14 meses de sueldo completo) |
-| Intereses que se generan cada mes | **$2.832.000** |
-| Intereses en un año | **$33.984.000** |
+| Concepto | Bancolombia | Tarjeta bono |
+|---|---|---|
+| Entra (neto) | $4.500.000 | $1.400.000 |
+| Arriendo | -$900.000 | |
+| Transporte | -$300.000 | |
+| Celular | -$500.000 | |
+| Mercado | | -$1.000.000 |
+| **Queda** | **$2.800.000** | **$400.000** |
 
-**Casi la mitad del sueldo (48 %) se va solo en intereses**, sin que la deuda baje. Si solo se pagan los intereses, en un año se pagan ~34 millones y se sigue debiendo los mismos 84.
+## 2. Deudas
 
-### Deudas, de la más cara a la más barata
-
-| Deuda | Saldo | Tasa mensual | Equivale al año (E.A.) | Interés al mes |
+| Deuda | Saldo | Tasa mensual | Equivale al año | Interés al mes |
 |---|---|---|---|---|
 | Persona natural | $4.000.000 | 5,00 % | 79,6 % | $200.000 |
-| Jonathan – tramo 30M | $30.000.000 | 3,50 % | 51,1 % | $1.050.000 |
+| Jonathan, tramo 30M | $30.000.000 | 3,50 % | 51,1 % | $1.050.000 |
 | Brandon | $40.000.000 | 3,33 % | 48,2 % | $1.332.000 |
-| Jonathan – tramo 10M | $10.000.000 | 2,50 % | 34,5 % | $250.000 |
+| Jonathan, tramo 10M | $10.000.000 | 2,50 % | 34,5 % | $250.000 |
+| Tarjeta de crédito | $4.000.000 | ~2 % *(supuesto, confirmar)* | ~26,8 % | ~$80.000 |
+| **Total** | **$88.000.000** | | | **$2.912.000** |
 
-Todas estas tasas son mucho más altas que las de un crédito bancario. Además, parecen estar por encima de la **tasa de usura** que publica cada mes la Superintendencia Financiera. Confírmalo con la cifra del mes. Esto no es para dejar de pagar. Es un argumento legítimo para **negociar una tasa más baja** con cada acreedor.
+### El problema central
 
-## 2. Estrategia principal: cambiar deuda cara por deuda barata
+- Te quedan **$2.800.000** para deudas y los intereses suman **$2.912.000**.
+- **Faltan unos $112.000 cada mes solo para cubrir intereses**, sin abonar nada a capital.
+- Así como está, la deuda **nunca baja**: crece un poco cada mes.
+- Casi la mitad del sueldo (49 %) se va en intereses.
 
-Esta es la jugada con más impacto. Como tienes **empleo formal**, puedes pedir:
+## 3. Plan recomendado
 
-1. **Crédito de libranza** (se descuenta por nómina). Suele ser la tasa más baja, más o menos 1,1 %–1,5 % mensual. Pregunta en Bancolombia, en el banco o cooperativa con convenio con tu empresa y en el fondo de empleados si lo hay.
-2. **Crédito de libre inversión** en Bancolombia, más o menos 1,6 %–2,2 % mensual.
-3. **Compra de cartera**: algunos bancos lo ofrecen para pasar deudas de otros lados a ellos.
+### Paso 1. Recortes inmediatos (esta semana)
+- **Celular de $500.000 a ~$100.000**: ahorras **$400.000/mes**. Si el valor incluye la cuota de un equipo, revisar cuánto falta y no renovar. Esto solo pasa el balance de negativo a positivo.
+- **Usar los $400.000 que sobran en el bono** para todo lo que se pueda (aseo, farmacia, comidas, ropa), así no sale de Bancolombia.
+- No usar más la tarjeta de crédito.
 
-| Opción para los 84M | Cuota mensual | Termina en | Intereses totales |
+Con el recorte del celular quedan **$3.200.000/mes para deudas**.
+
+### Paso 2. Cerrar el crédito bancario de 80M (lo más importante)
+
+Con los 80M se pagan, en este orden: los 4M al 5 %, los 30M de Jonathan, los 40M de Brandon y 6M del tramo de 10M de Jonathan. Quedan pendientes solo **4M de Jonathan al 2,5 %** y la **tarjeta de 4M**.
+
+| Tasa del banco (mensual) | Cuota 60 meses | Destinando 2,8M/mes | Destinando 3,2M/mes |
 |---|---|---|---|
-| Hoy (solo intereses) | $2.832.000 | **nunca** | infinito |
-| Pagando 3,5M/mes a personas (avalancha) | $3.500.000 | 48 meses | ~$82,3M |
-| **Libranza 1,3 % a 48 meses** | **$2.363.000** | 48 meses | **~$29,4M** |
-| Libranza 1,3 % a 60 meses | $2.025.000 | 60 meses | ~$37,5M |
-| Libre inversión 1,8 % a 60 meses | $2.301.000 | 60 meses | ~$54,1M |
+| 1,3 % (16,8 % E.A.) | $1.928.000 | libre en **41 meses**, intereses ~$26M | libre en **35 meses**, ~$22M |
+| 1,6 % (21,0 % E.A.) | $2.084.000 | 45 meses, ~$36M | 37 meses, ~$29M |
+| 1,9 % (25,3 % E.A.) | $2.246.000 | 49 meses, ~$48M | 40 meses, ~$38M |
+| 2,2 % (29,8 % E.A.) | $2.414.000 | 54 meses, ~$63M | 43 meses, ~$48M |
+| **Sin crédito** (personas) | — | **nunca** | 68 meses, **~$129M** |
 
-👉 Con una libranza a 48 meses **pagas menos cada mes que hoy** ($2,36M frente a $2,83M) **y terminas de pagar en 4 años**. Te ahorras unos **$53 millones** comparado con pagarle 3,5M al mes a las personas.
+Con el crédito pasas de no salir nunca, o de 5,7 años y $129M en intereses, a **3 años y $22–38M**. Por eso **cada punto de tasa que negocies con el banco vale millones**.
 
-Si el banco no presta los 84M completos, sirve igual pedir una parte y **reemplazar primero las deudas más caras**: los 4M al 5 %, después los 30M de Jonathan al 3,5 % y después los 40M de Brandon.
+Cómo repartir el dinero una vez desembolsado el crédito:
+1. Pagar la cuota del banco cada mes, sin falta.
+2. Todo lo que sobre va a **Jonathan, 4M restantes** (2,5 %). Se cierra en 4–7 meses.
+3. Después, a la **tarjeta de crédito**. Se cierra entre el mes 7 y el 13.
+4. Después, **abonos extra a capital del banco** (pedir que se apliquen a *reducir plazo*).
 
-## 3. Si se sigue pagando a las personas: método avalancha
+### Paso 3. Fondo de emergencia
+Cuando se cierren Jonathan y la tarjeta, separar **$300.000/mes** hasta juntar ~$2.700.000 (un mes de gastos). Así una emergencia no te devuelve a pedir prestado a personas.
 
-El orden de pago es:
-1. **Persona natural, 4M al 5 %**
-2. **Jonathan, tramo 30M al 3,5 %**
-3. **Brandon, 40M al 3,33 %**
-4. **Jonathan, tramo 10M al 2,5 %**
+### Paso 4. Más ingresos
+Ver `INGRESOS_EXTRA.md`. Cada $1.000.000 extra al mes recorta cerca de un año del plan.
 
-Cada mes se paga el interés de todas y **todo el dinero extra va a la primera de la lista**. Cuando esa queda saldada, su cuota pasa a la siguiente.
+## 4. Si el banco no aprueba los 80M
+- Pedir lo que aprueben y recoger primero las deudas más caras: 5 % → 3,5 % → 3,33 %.
+- Negociar con Jonathan y Brandon bajar la tasa (ver `NEGOCIACION.md`).
+- Sin crédito y sin recortes, **no se puede salir**: el recorte del celular y los ingresos extra serían obligatorios.
 
-| Pago total a deudas al mes | Termina en | Intereses totales |
-|---|---|---|
-| $2.900.000 | 100 meses (8,3 años) | ~$204M |
-| $3.200.000 | 61 meses | ~$111M |
-| $3.500.000 | 48 meses | ~$82M |
-| $4.000.000 | 36 meses | ~$59M |
-| $4.500.000 | 30 meses | ~$47M |
-
-Cada $300.000 adicionales al mes recortan años y decenas de millones en intereses.
-
-## 4. Acciones inmediatas
-
-- [ ] **Usar la tarjeta bono para todo el mercado y las compras del día a día.** Así los $4,5M de Bancolombia quedan libres para deudas y gastos que solo se pagan con transferencia. No retirar del bono (cobra ~$5.000).
-- [ ] Ir a Bancolombia y al área de nómina o al fondo de empleados a preguntar por **libranza / compra de cartera**: monto máximo, tasa y plazo.
-- [ ] Hablar con Jonathan y Brandon: proponer **bajar la tasa** (por ejemplo, al 2 %) a cambio de abonos a capital constantes. Dejar todo **por escrito** con recibos de cada pago.
-- [ ] Pagar primero la deuda de **4M al 5 %**. Es la más cara y la más rápida de cerrar.
-- [ ] Prima de diciembre, cesantías (si se pueden usar) o cualquier ingreso extra: **directo a la deuda más cara**.
-
-## 5. Ideas para generar más ingresos
-
-*Se ajustan cuando sepa tu profesión y tu tiempo libre.*
-- Horas extra, bonificaciones o un ascenso en el trabajo actual.
-- Freelance o asesorías en lo que ya sabes hacer.
-- Vender cosas que no se usan (es dinero inmediato para la deuda del 5 %).
-- Ingresos de fin de semana: domicilios, clases, servicios técnicos, etc.
-
-## 6. Datos que faltan para cerrar el plan
-
-- Gastos mensuales: arriendo, servicios, transporte, celular, colegio, etc. Se llenan en `datos.json`.
-- ¿Hoy cuánto les pagas al mes a cada uno? ¿Solo intereses o también capital?
-- ¿El sueldo de 5,9M es el bruto o ya es lo que llega en total?
-- ¿Tienes ahorros, cesantías o prima?
-- ¿Otras deudas (tarjetas de crédito, créditos bancarios, celular)?
+## 5. Datos que faltan
+- **¿Qué significa "259"?** ¿Le pagas $2.590.000 al mes en total a las personas? Si es así, estás pagando **menos** que los intereses (~$2.832.000) y la diferencia se está sumando a la deuda o quedando atrasada.
+- **¿Los 80M del banco son el crédito nuevo que están negociando para pagar a las personas, o es otra deuda que ya tienes con el banco?** Todo este plan asume lo primero. Si es una deuda adicional, el panorama cambia por completo.
+- Tasa de interés y pago mínimo de la **tarjeta de crédito** (sale en el extracto).
+- **Servicios públicos e internet**: ¿están incluidos en el arriendo?
+- Gastos que no son fijos: salidas, ropa, salud, familia, suscripciones.

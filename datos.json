@@ -1,21 +1,29 @@
 {
   "moneda": "COP",
   "ingresos": [
-    {"nombre": "Salario - consignado en Bancolombia (libre uso)", "monto": 4500000, "libre_uso": true},
-    {"nombre": "Salario - tarjeta bono (solo compras; retiro cuesta ~5.000)", "monto": 1400000, "libre_uso": false}
+    {"nombre": "Salario neto - Bancolombia (libre uso)", "monto": 4500000, "libre_uso": true},
+    {"nombre": "Salario neto - tarjeta bono (solo compras; retiro cuesta ~5.000)", "monto": 1400000, "libre_uso": false}
   ],
   "gastos_fijos": [
-    {"nombre": "PENDIENTE: arriendo / vivienda", "monto": 0},
-    {"nombre": "PENDIENTE: mercado / alimentación", "monto": 0},
-    {"nombre": "PENDIENTE: servicios públicos", "monto": 0},
-    {"nombre": "PENDIENTE: transporte", "monto": 0},
-    {"nombre": "PENDIENTE: celular / internet", "monto": 0},
-    {"nombre": "PENDIENTE: otros", "monto": 0}
+    {"nombre": "Arriendo", "monto": 900000, "medio": "efectivo"},
+    {"nombre": "Transporte", "monto": 300000, "medio": "efectivo"},
+    {"nombre": "Celular", "monto": 500000, "medio": "efectivo"},
+    {"nombre": "Mercado", "monto": 1000000, "medio": "bono"}
   ],
   "deudas": [
-    {"nombre": "Persona natural (4M al 5%)", "saldo": 4000000, "tasa_mensual": 0.05},
-    {"nombre": "Jonathan - tramo 10M", "saldo": 10000000, "tasa_mensual": 0.025},
-    {"nombre": "Jonathan - tramo 30M", "saldo": 30000000, "tasa_mensual": 0.035},
-    {"nombre": "Brandon", "saldo": 40000000, "tasa_mensual": 0.0333}
+    {"nombre": "Persona natural 4M", "saldo": 4000000, "tasa_mensual": 0.05},
+    {"nombre": "Jonathan tramo 30M", "saldo": 30000000, "tasa_mensual": 0.035},
+    {"nombre": "Brandon 40M", "saldo": 40000000, "tasa_mensual": 0.0333},
+    {"nombre": "Jonathan tramo 10M", "saldo": 10000000, "tasa_mensual": 0.025},
+    {"nombre": "Tarjeta de crédito (tasa SUPUESTA 2%)", "saldo": 4000000, "tasa_mensual": 0.02}
+  ],
+  "credito_banco": {
+    "nota": "Crédito de 80M en negociación para recoger deudas con personas. Tasas por confirmar.",
+    "monto": 80000000,
+    "plazo_meses": 60,
+    "tasas_a_evaluar": [0.013, 0.016, 0.019, 0.022]
+  },
+  "recortes_posibles": [
+    {"nombre": "Bajar plan de celular a ~100.000", "ahorro": 400000}
   ]
 }
