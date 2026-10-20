@@ -8,72 +8,77 @@
 |---|---|---|
 | Entra (neto) | $4.500.000 | $1.400.000 |
 | Arriendo | -$900.000 | |
+| Servicios + internet | -$500.000 | |
 | Transporte | -$300.000 | |
 | Celular | -$500.000 | |
 | Mercado | | -$1.000.000 |
-| **Queda** | **$2.800.000** | **$400.000** |
+| **Queda** | **$2.300.000** | **$400.000** |
+| Intereses que pagas a las personas | **-$2.832.000** | |
+| **Hueco mensual** | **-$532.000** | |
+
+Hoy pagas a las personas más de lo que te queda en la cuenta. Ese hueco de ~$532.000 al mes se está cubriendo con algo (¿tarjeta, préstamos, atrasos?) y hace que la deuda crezca.
 
 ## 2. Deudas
 
-| Deuda | Saldo | Tasa mensual | Equivale al año | Interés al mes |
-|---|---|---|---|---|
-| Persona natural | $4.000.000 | 5,00 % | 79,6 % | $200.000 |
-| Jonathan, tramo 30M | $30.000.000 | 3,50 % | 51,1 % | $1.050.000 |
-| Brandon | $40.000.000 | 3,33 % | 48,2 % | $1.332.000 |
-| Jonathan, tramo 10M | $10.000.000 | 2,50 % | 34,5 % | $250.000 |
-| Tarjeta de crédito | $4.000.000 | ~2 % *(supuesto, confirmar)* | ~26,8 % | ~$80.000 |
-| **Total** | **$88.000.000** | | | **$2.912.000** |
+| Deuda | Saldo | Tasa mensual | Equivale al año | Interés al mes | Estado |
+|---|---|---|---|---|---|
+| Persona natural | $4.000.000 | 5,00 % | 79,6 % | $200.000 | Al día (solo intereses) |
+| Jonathan, tramo 30M | $30.000.000 | 3,50 % | 51,1 % | $1.050.000 | Al día (solo intereses) |
+| Brandon | $40.000.000 | 3,33 % | 48,2 % | $1.332.000 | Al día (solo intereses) |
+| Jonathan, tramo 10M | $10.000.000 | 2,50 % | 34,5 % | $250.000 | Al día (solo intereses) |
+| Tarjeta de crédito | $4.000.000 | >2 % (se asume 2,3 %) | ~31 % | ~$92.000 | ? |
+| **Banco** | **$140.000.000** cobrados (capital 80M) | se asume 2 % | | ~$2.800.000 | **En mora, reportado** |
+| **Total** | **$228.000.000** | | | **~$5.700.000** | |
 
-### El problema central
+**La deuda equivale a 39 meses de sueldo completo, y los intereses que genera (~$5,7M) son casi todo tu ingreso (97 %).**
 
-- Te quedan **$2.800.000** para deudas y los intereses suman **$2.912.000**.
-- **Faltan unos $112.000 cada mes solo para cubrir intereses**, sin abonar nada a capital.
-- Así como está, la deuda **nunca baja**: crece un poco cada mes.
-- Casi la mitad del sueldo (49 %) se va en intereses.
+## 3. La conclusión honesta
 
-## 3. Plan recomendado
+Con las tasas y los saldos actuales, **no hay forma de pagar**, ni siquiera con $2M o $4M más de ingreso al mes. Salir requiere **las dos cosas a la vez**:
 
-### Paso 1. Recortes inmediatos (esta semana)
-- **Celular de $500.000 a ~$100.000**: ahorras **$400.000/mes**. Si el valor incluye la cuota de un equipo, revisar cuánto falta y no renovar. Esto solo pasa el balance de negativo a positivo.
-- **Usar los $400.000 que sobran en el bono** para todo lo que se pueda (aseo, farmacia, comidas, ropa), así no sale de Bancolombia.
-- No usar más la tarjeta de crédito.
+1. **Renegociar las deudas** (banco y personas), y
+2. **Subir los ingresos** al menos **$1–2M al mes**.
 
-Con el recorte del celular quedan **$3.200.000/mes para deudas**.
+| Escenario | Deuda | Cuota para salir en 7 años | Con $2,7M/mes | Con $4,7M/mes | Con $6,7M/mes |
+|---|---|---|---|---|---|
+| 1. Nada cambia | $228M | $6,6M | nunca | nunca | 5,7 años |
+| 2. Banco acepta solo capital (80M) al 1,5 %; personas bajan al 2 % | $168M | $3,9M | nunca | 4,7 años | 2,8 años |
+| 3. Banco 80M al 1,5 %; personas al 1 % | $168M | $3,3M | 9,5 años | **3,9 años** | **2,5 años** |
 
-### Paso 2. Cerrar el crédito bancario de 80M (lo más importante)
+*$2,7M = lo que queda con el recorte del celular. $4,7M y $6,7M = con $2M o $4M de ingreso extra.*
 
-Con los 80M se pagan, en este orden: los 4M al 5 %, los 30M de Jonathan, los 40M de Brandon y 6M del tramo de 10M de Jonathan. Quedan pendientes solo **4M de Jonathan al 2,5 %** y la **tarjeta de 4M**.
+## 4. Plan por etapas
 
-| Tasa del banco (mensual) | Cuota 60 meses | Destinando 2,8M/mes | Destinando 3,2M/mes |
-|---|---|---|---|
-| 1,3 % (16,8 % E.A.) | $1.928.000 | libre en **41 meses**, intereses ~$26M | libre en **35 meses**, ~$22M |
-| 1,6 % (21,0 % E.A.) | $2.084.000 | 45 meses, ~$36M | 37 meses, ~$29M |
-| 1,9 % (25,3 % E.A.) | $2.246.000 | 49 meses, ~$48M | 40 meses, ~$38M |
-| 2,2 % (29,8 % E.A.) | $2.414.000 | 54 meses, ~$63M | 43 meses, ~$48M |
-| **Sin crédito** (personas) | — | **nunca** | 68 meses, **~$129M** |
+### Etapa 0. Esta semana: parar el sangrado
+- [ ] **Celular de $500.000 a ~$100.000**: +$400.000 al mes.
+- [ ] Usar los **$400.000 que sobran en el bono** para todo lo que se pueda comprar con él.
+- [ ] **No pedir prestado a nadie más** para pagar intereses. Eso es lo que hace crecer la bola.
+- [ ] **Orden de prioridad de pagos**: 1) arriendo, servicios, comida y transporte, porque sin ellos pierdes el trabajo y el ingreso; 2) lo pactado con quien negocies; 3) lo demás.
 
-Con el crédito pasas de no salir nunca, o de 5,7 años y $129M en intereses, a **3 años y $22–38M**. Por eso **cada punto de tasa que negocies con el banco vale millones**.
+### Etapa 1. Próximas 2 semanas: el banco
+- [ ] **No aceptar cifras por teléfono.** Pedir por escrito el **estado de cuenta detallado**: capital, intereses corrientes, intereses de mora, honorarios de cobranza y seguros.
+- [ ] Revisar que **los intereses de mora no superen la tasa de usura** (Art. 884 del Código de Comercio). Lo que se cobre por encima es reclamable.
+- [ ] Preguntar si la deuda está **castigada o vendida a una casa de cobranza**. Si lo está, suelen aceptar **descuentos grandes**.
+- [ ] Pedir **reestructuración**: condonar intereses de mora, saldo cercano al capital (80M), plazo largo (84–96 meses) y tasa baja. Ver `NEGOCIACION.md`.
+- [ ] Preguntar si ya hay una **demanda o proceso judicial**. Si lo hay, pueden **embargar parte del sueldo** (por regla general, una quinta parte de lo que excede el salario mínimo).
 
-Cómo repartir el dinero una vez desembolsado el crédito:
-1. Pagar la cuota del banco cada mes, sin falta.
-2. Todo lo que sobre va a **Jonathan, 4M restantes** (2,5 %). Se cierra en 4–7 meses.
-3. Después, a la **tarjeta de crédito**. Se cierra entre el mes 7 y el 13.
-4. Después, **abonos extra a capital del banco** (pedir que se apliquen a *reducir plazo*).
+### Etapa 2. Paralelo: las personas
+Hoy reciben $2,83M al mes solo en intereses, a tasas que parecen estar **por encima de la usura legal**. Hay que proponerles **bajar la tasa** (a 1–2 %) y, si se puede, empezar a abonar a capital. Ver `NEGOCIACION.md`.
 
-### Paso 3. Fondo de emergencia
-Cuando se cierren Jonathan y la tarjeta, separar **$300.000/mes** hasta juntar ~$2.700.000 (un mes de gastos). Así una emergencia no te devuelve a pedir prestado a personas.
+### Etapa 3. Si la negociación individual no funciona: insolvencia de persona natural
+Existe un procedimiento legal en Colombia (**Ley 1564 de 2012, Código General del Proceso, arts. 531 y siguientes**) para personas naturales **no comerciantes**, como un empleado. Se tramita en un **centro de conciliación o notaría**. Sirve para:
+- Negociar **con todos los acreedores a la vez** (banco y personas) un acuerdo de pago con plazos y tasas manejables.
+- **Suspender los cobros y procesos** mientras se negocia.
 
-### Paso 4. Más ingresos
-Ver `INGRESOS_EXTRA.md`. Cada $1.000.000 extra al mes recorta cerca de un año del plan.
+Tiene requisitos: estar en **cesación de pagos**, con varias obligaciones en mora de más de 90 días. **Consultarlo con un abogado o con el consultorio jurídico gratuito de una universidad**. Es una herramienta legítima pensada justo para situaciones así.
 
-## 4. Si el banco no aprueba los 80M
-- Pedir lo que aprueben y recoger primero las deudas más caras: 5 % → 3,5 % → 3,33 %.
-- Negociar con Jonathan y Brandon bajar la tasa (ver `NEGOCIACION.md`).
-- Sin crédito y sin recortes, **no se puede salir**: el recorte del celular y los ingresos extra serían obligatorios.
+### Etapa 4. Más ingresos (obligatorio, no opcional)
+Ver `INGRESOS_EXTRA.md`. La meta es **+$2M al mes en 3–6 meses**.
 
 ## 5. Datos que faltan
-- **¿Qué significa "259"?** ¿Le pagas $2.590.000 al mes en total a las personas? Si es así, estás pagando **menos** que los intereses (~$2.832.000) y la diferencia se está sumando a la deuda o quedando atrasada.
-- **¿Los 80M del banco son el crédito nuevo que están negociando para pagar a las personas, o es otra deuda que ya tienes con el banco?** Todo este plan asume lo primero. Si es una deuda adicional, el panorama cambia por completo.
-- Tasa de interés y pago mínimo de la **tarjeta de crédito** (sale en el extracto).
-- **Servicios públicos e internet**: ¿están incluidos en el arriendo?
-- Gastos que no son fijos: salidas, ropa, salud, familia, suscripciones.
+- **¿Cómo estás cubriendo hoy el hueco de ~$532.000 al mes?** (tarjeta, préstamos, atrasos en algo).
+- **¿Con qué banco es la deuda de 80M?** Si es **Bancolombia**, donde te llega el sueldo, hay que revisar si el contrato les permite **debitarte la cuenta**.
+- ¿Cuántos meses lleva en mora? ¿Te ha llegado alguna **demanda o notificación de juzgado**?
+- ¿La tarjeta de crédito está al día o en mora? ¿Cuál es el **pago mínimo**?
+- ¿Con las personas firmaste **pagarés o letras**?
+- ¿Tu sueldo bruto (antes de descuentos) cuánto es? Sirve para saber cuánto podrían embargar.

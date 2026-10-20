@@ -6,24 +6,32 @@
   ],
   "gastos_fijos": [
     {"nombre": "Arriendo", "monto": 900000, "medio": "efectivo"},
+    {"nombre": "Servicios públicos + internet", "monto": 500000, "medio": "efectivo"},
     {"nombre": "Transporte", "monto": 300000, "medio": "efectivo"},
     {"nombre": "Celular", "monto": 500000, "medio": "efectivo"},
     {"nombre": "Mercado", "monto": 1000000, "medio": "bono"}
   ],
-  "deudas": [
-    {"nombre": "Persona natural 4M", "saldo": 4000000, "tasa_mensual": 0.05},
-    {"nombre": "Jonathan tramo 30M", "saldo": 30000000, "tasa_mensual": 0.035},
-    {"nombre": "Brandon 40M", "saldo": 40000000, "tasa_mensual": 0.0333},
-    {"nombre": "Jonathan tramo 10M", "saldo": 10000000, "tasa_mensual": 0.025},
-    {"nombre": "Tarjeta de crédito (tasa SUPUESTA 2%)", "saldo": 4000000, "tasa_mensual": 0.02}
-  ],
-  "credito_banco": {
-    "nota": "Crédito de 80M en negociación para recoger deudas con personas. Tasas por confirmar.",
-    "monto": 80000000,
-    "plazo_meses": 60,
-    "tasas_a_evaluar": [0.013, 0.016, 0.019, 0.022]
-  },
   "recortes_posibles": [
-    {"nombre": "Bajar plan de celular a ~100.000", "ahorro": 400000}
+    {"nombre": "Plan de celular a ~100.000", "ahorro": 400000}
+  ],
+  "deudas": [
+    {"nombre": "Persona natural 4M", "saldo": 4000000, "tasa_mensual": 0.05, "pago_actual": 200000},
+    {"nombre": "Jonathan tramo 30M", "saldo": 30000000, "tasa_mensual": 0.035, "pago_actual": 1050000},
+    {"nombre": "Brandon 40M", "saldo": 40000000, "tasa_mensual": 0.0333, "pago_actual": 1332000},
+    {"nombre": "Jonathan tramo 10M", "saldo": 10000000, "tasa_mensual": 0.025, "pago_actual": 250000},
+    {"nombre": "Tarjeta de crédito (tasa >2%, se asume 2,3%)", "saldo": 4000000, "tasa_mensual": 0.023, "pago_actual": 0},
+    {"nombre": "Banco EN MORA (capital 80M; cobran 140M)", "saldo": 140000000, "tasa_mensual": 0.02, "pago_actual": 0, "en_mora": true}
+  ],
+  "escenarios_negociacion": [
+    {"nombre": "1. Nada cambia (tasas actuales, banco cobra 140M)",
+     "ajustes": {}},
+    {"nombre": "2. Banco acepta solo capital 80M al 1,5%; personas bajan a 2%",
+     "ajustes": {"Banco": {"saldo": 80000000, "tasa_mensual": 0.015},
+                 "Persona": {"tasa_mensual": 0.02}, "Jonathan": {"tasa_mensual": 0.02},
+                 "Brandon": {"tasa_mensual": 0.02}}},
+    {"nombre": "3. Banco 80M al 1,5%; personas al 1% (acuerdo fuerte o insolvencia)",
+     "ajustes": {"Banco": {"saldo": 80000000, "tasa_mensual": 0.015},
+                 "Persona": {"tasa_mensual": 0.01}, "Jonathan": {"tasa_mensual": 0.01},
+                 "Brandon": {"tasa_mensual": 0.01}}}
   ]
 }

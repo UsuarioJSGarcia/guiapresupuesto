@@ -1,35 +1,49 @@
 # Plan para generar más ingresos (ingeniero de software, poco tiempo libre)
 
-La regla: con poco tiempo, buscar **más pago por hora**, no más horas.
+**Meta: +$2M al mes en 3–6 meses.** Con poco tiempo, hay que buscar **más pago por hora**, no más horas, y evitar cualquier cosa que ponga en riesgo dinero que no tienes.
 
-## Opción 1. Trabajo remoto pagado en dólares (la de mayor impacto)
-Un ingeniero de software en Colombia que trabaja remoto para empresas de EE. UU. o Europa suele ganar **USD 2.500–6.000/mes** (~$10–24M COP), según experiencia y nivel de inglés. Es la única opción que cambia el plan de años a meses.
+## Evaluación de las ideas
 
-**Cómo empezar sin dejar el trabajo actual:**
-1. Actualizar el **CV en inglés** y el **LinkedIn** ("Open to work: remote", ubicación Colombia).
-2. Aplicar en: LinkedIn Jobs (filtro *Remote*), Turing, Toptal, Arc.dev, Torre.ai, Revelo, BairesDev, Globant y Endava (contrato en Colombia, en dólares o con salario más alto).
-3. Meta: **5 aplicaciones por semana**, unos 30 minutos al día.
-4. Practicar entrevistas técnicas: LeetCode (nivel fácil y medio) y system design básico.
+| Idea | Tiempo hasta ver dinero | Riesgo | Veredicto |
+|---|---|---|---|
+| **Bot de trading en bolsa** | Incierto | **Alto**: necesita capital que hoy no tienes y la mayoría de bots pierden contra el mercado | ❌ **No ahora** |
+| **Videos / contenido en redes** | 6–12 meses para monetizar | Bajo en dinero, alto en tiempo | ⚠️ Solo como complemento |
+| **Automatizaciones con IA para negocios** | 1–2 meses | Bajo | ✅ **Sí: rápido y usa tu perfil** |
+| **Trabajo remoto en dólares** | 1–3 meses | Bajo | ✅ **Sí: el de mayor impacto** |
 
-## Opción 2. Freelance puntual (ingreso más rápido)
-- Plataformas: **Upwork, Workana** (Latinoamérica) y Fiverr.
-- Trabajos cortos y de valor alto: arreglar bugs, integraciones de API, automatizaciones (scripts, bots, scraping), páginas en WordPress o Next.js para negocios locales.
-- Cobrar por proyecto, no por hora. Meta inicial: **1 proyecto de $1–2M al mes**, dedicando 5–8 horas a la semana.
-- Tu red cercana: avisar a conocidos y negocios que haces software. Un solo cliente local puede pagar un mes de deuda.
+**Sobre el trading:** un bot no crea dinero. Necesita capital para operar y, con deudas al 3–5 % mensual, cualquier peso libre rinde más pagando deuda que en la bolsa. Además, perder ese capital empeoraría todo. Se puede retomar como proyecto cuando estés sin deudas.
 
-## Opción 3. En el trabajo actual
-- Pedir un **aumento** o un cambio de cargo con datos: salario de mercado en Glassdoor y en las encuestas salariales de la industria.
-- Preguntar por horas extra pagadas, bonos o guardias (on-call).
+## ✅ Opción 1. Servicios de automatización con IA para negocios
+Hoy los negocios pequeños pagan por esto y tú lo puedes construir rápido con IA:
+- **Chatbot de WhatsApp** que responde clientes, agenda citas y toma pedidos. Para restaurantes, consultorios, peluquerías, tiendas.
+- **Automatización de procesos**: facturas, reportes en Excel o Google Sheets, correos, inventarios.
+- **Páginas web + agente de IA** para captar clientes.
+
+**Modelo:** instalación ($1–3M) + **mensualidad** de mantenimiento ($150–400 mil por cliente). **5–8 clientes con mensualidad = +$1–2M al mes recurrentes**, con poco tiempo una vez montado.
+
+**Primeros pasos:**
+1. Construir **una solución base** (chatbot de WhatsApp) que se reuse para todos los clientes.
+2. Ofrecerla primero a **negocios conocidos** (familia, barrio, amigos) con descuento a cambio de testimonio.
+3. Publicar casos en LinkedIn, Instagram y TikTok. **Aquí sí entra el contenido en video**: mostrar lo que haces atrae clientes.
+
+## ✅ Opción 2. Trabajo remoto pagado en dólares
+Un ingeniero de software que trabaja remoto para empresas del exterior suele ganar bastante más que en el mercado local. Puede ser el doble o más, según experiencia e inglés. Es lo único que cambia el plan de años a meses.
+1. CV en inglés + LinkedIn ("Open to work: remote").
+2. Aplicar en LinkedIn (filtro Remote), Turing, Toptal, Arc.dev, Torre.ai, Revelo, BairesDev, Globant y Endava.
+3. **5 aplicaciones por semana** (30 min al día).
+
+## ⚠️ Opción 3. Contenido en redes (complemento)
+Hacerlo **sobre lo que ya haces** (automatizaciones con IA y programación) para atraer clientes de la Opción 1, no como fuente principal de ingreso.
 
 ## Qué hacer con el dinero extra
-**Todo** el ingreso extra va a la deuda más cara del momento, según `DIAGNOSTICO.md`. Para simularlo:
+**Todo** va al plan de deudas, según `DIAGNOSTICO.md`. Para simular:
 ```bash
-python3 planificador.py 4200000   # p. ej. 3,2M + 1M de freelance
+python3 planificador.py 4700000   # 2,7M + 2M de ingreso extra
 ```
 
-## Lo que puedo hacer por ti
-Pásame tu experiencia: empresas, años, tecnologías, proyectos, estudios y nivel de inglés. Con eso te preparo:
-- CV en inglés y en español.
-- Texto para el perfil de LinkedIn.
-- Perfil de Upwork o Workana y una propuesta modelo para aplicar.
-- Lista de empresas y vacantes a las que apuntar.
+## Lo que puedo construir contigo
+Dime por cuál empezamos y lo armo en este repositorio:
+- **Plantilla de chatbot de WhatsApp con IA** lista para adaptar a cada negocio.
+- **Página web/portafolio** para ofrecer tus servicios, con precios y casos.
+- **Propuesta comercial y mensaje** para ofrecer el servicio a negocios.
+- **CV en inglés + perfil de LinkedIn/Upwork.** Para esto necesito tu experiencia: empresas, años, tecnologías y nivel de inglés.
