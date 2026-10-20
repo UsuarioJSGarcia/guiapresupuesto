@@ -1,45 +1,41 @@
 # Guía de negociación
 
-## 1. Con el banco (deuda en mora: capital 80M, cobran 140M)
+## 1. Banco de vivienda (en mora: capital 80M, cobran 140M)
+El plan completo, con las plantillas listas para enviar, está en **`BANCO_RENEGOCIACION.md`**.
 
-### Antes de negociar
-- **Nunca aceptar ni prometer nada por teléfono.** Responder: *"Envíeme por escrito el estado de cuenta detallado y la propuesta, por correo"*.
-- Pedir por escrito (derecho de petición si no responden en 15 días hábiles):
-  - [ ] Capital pendiente.
-  - [ ] Intereses corrientes y **tasa aplicada a cada mes**.
-  - [ ] Intereses de mora y **tasa aplicada**. No pueden superar la usura vigente de cada mes.
-  - [ ] Honorarios de cobranza, seguros y otros cargos.
-  - [ ] Si la deuda está **castigada** o fue **vendida/cedida** a una casa de cobranza, y a cuál.
-  - [ ] Si hay **proceso judicial** iniciado.
+En resumen: no negociar por teléfono → **derecho de petición** escrito → **Defensor del Consumidor Financiero como conciliador** → **Superintendencia Financiera**.
 
-### Qué pedir
-1. **Condonación de los intereses de mora y de los honorarios de cobranza.**
-2. **Reestructuración sobre el capital (80M)**, a **84–96 meses**, con la tasa más baja posible.
-3. Una **cuota que puedas cumplir**. Es mejor una cuota pequeña que se pague que una grande que vuelva a caer en mora.
-4. **Que el acuerdo quede por escrito** antes de pagar cualquier cosa.
+## 2. Jonathan, Brandon y la persona de los 4M (no aceptan bajar la tasa)
 
-### Frase base
-> "Quiero pagar esta obligación. Hoy mi capacidad de pago es de $X mensuales. Solicito una reestructuración sobre el capital, con condonación de intereses de mora y honorarios, a un plazo de 84 meses. Por favor envíenme la propuesta por escrito."
+### Lo que dice la ley
+- La **tasa de usura** de octubre de 2026 es **28,59 % E.A.**, alrededor de **2,12 % mensual** (Superfinanciera).
+- **Todas** las tasas que te cobran la superan:
 
-### Ojo
-- Si la deuda la tiene una **casa de cobranza**, la compraron por una fracción y suelen aceptar **pagos de 30–60 % del saldo**. Si en algún momento consigues una suma de una vez, ese es el mejor uso.
-- Cuando pagues, el **reporte negativo** en centrales dura el doble del tiempo que estuviste en mora, con un **máximo de 4 años** (Ley 2157 de 2021, "Borrón y cuenta nueva").
+| Deuda | Tasa | Equivale al año | ¿Supera la usura? |
+|---|---|---|---|
+| Persona 4M | 5 % | 79,6 % | Sí, casi 3 veces |
+| Jonathan 30M | 3,5 % | 51,1 % | Sí |
+| Brandon 40M | 3,33 % | 48,2 % | Sí |
+| Jonathan 10M | 2,5 % | 34,5 % | Sí |
 
-## 2. Con Jonathan y Brandon
+- Hoy les pagas **$2.832.000 al mes**. Al tope legal serían unos **$1.781.000**. **Estás pagando ~$1.050.000 al mes por encima de lo que la ley permite cobrar.**
+- Consecuencias legales para quien cobra por encima de la usura:
+  - **Pérdida de los intereses cobrados en exceso, más una suma igual como sanción** (Art. 72 de la Ley 45 de 1990, en relación con el Art. 884 del Código de Comercio). Según la jurisprudencia, aplica sobre intereses **ya pagados**, así que lo que ya les has pagado de más podría ser reclamable.
+  - **Usura es delito** (Art. 305 del Código Penal).
 
-Hoy les pagas **$2.832.000 al mes solo en intereses** y no te alcanza. Hay que proponer un cambio antes de caer en atrasos.
+### Cómo usar esto (con cuidado)
+Que ellos "no negocien" no significa que no exista otra salida. Pero esto **se maneja con abogado** y sabiendo que la relación personal puede romperse.
 
-Mensaje sugerido (ajústalo a tu forma de hablar):
+1. **Llevar un registro de todo lo que les has pagado**: fechas, montos y comprobantes. Es la prueba.
+2. **Consulta con un abogado** o con un **consultorio jurídico universitario (gratis)**: con los comprobantes pueden calcular cuánto pagaste en exceso y recomendarte el camino.
+3. Con esa asesoría, una **conversación o carta firme pero respetuosa**:
+   > "Quiero seguir pagándote lo que te debo. Pero me asesoré y las tasas pactadas superan el máximo legal. Te propongo que de aquí en adelante liquidemos con la tasa máxima legal vigente y que los pagos hechos de más se abonen al capital."
+4. **Si no hay acuerdo y llegas a cumplir los requisitos**, en la **insolvencia de persona natural** el acuerdo aprobado por la mayoría de acreedores los obliga aunque voten en contra (ver `BANCO_RENEGOCIACION.md`).
 
-> Hola [nombre]. Te quiero ser muy sincero: he cumplido cada mes con los intereses, pero mis finanzas no dan para seguir así y prefiero hablarlo contigo antes de quedarte mal. Te propongo bajar la tasa a [1,5 %] mensual para poder seguir cumpliéndote sin falta y empezar a abonar a capital apenas pueda. Mi intención es pagarte todo. ¿Lo podemos hablar esta semana?
-
-**Consejos:**
-- Siempre **por escrito** y con **comprobante de cada pago**.
-- Lo que acuerden, confirmarlo por mensaje: "Quedamos en X % desde [fecha]".
-- Las tasas actuales (2,5 %–5 % mensual) parecen estar por encima de la **tasa de usura** que publica cada mes la Superintendencia Financiera. Es un argumento para negociar con respeto, no para amenazar ni dejar de pagar.
-- Si no hay acuerdo, la **insolvencia de persona natural no comerciante** (ver `DIAGNOSTICO.md`) los incluye también a ellos.
+**No dejes de pagarles por decisión propia sin asesoría.** Si tienen pagarés o letras firmadas, pueden demandarte y pedir embargo del sueldo.
 
 ## 3. Asesoría gratuita
-- **Consultorios jurídicos de universidades**: gratis para personas de bajos o medianos recursos.
-- **Defensor del consumidor financiero** del banco: gratis, para reclamar cobros indebidos.
-- **Superintendencia Financiera**: quejas contra el banco si no responde o cobra por encima de la ley.
+- **Consultorios jurídicos de universidades**: gratis.
+- **Defensor del Consumidor Financiero** del banco: gratis.
+- **Superintendencia Financiera**: quejas contra el banco.
+- **Superintendencia de Industria y Comercio**: quejas por cobranza abusiva (Ley 2300 de 2023).

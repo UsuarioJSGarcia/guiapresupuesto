@@ -79,6 +79,9 @@ def aplicar_escenario(esc):
         for clave, cambios in esc["ajustes"].items():
             if d["nombre"].startswith(clave):
                 nueva.update(cambios)
+        if "plazo_meses" in nueva:
+            nueva["cuota_fija"] = cuota_credito(nueva["saldo"], nueva["tasa_mensual"],
+                                                nueva["plazo_meses"])
         deudas.append(nueva)
     return deudas
 
@@ -127,10 +130,16 @@ def escenarios(pagos):
         total = sum(d["saldo"] for d in deudas)
         interes = sum(d["saldo"] * d["tasa_mensual"] for d in deudas)
         print(f"\n{esc['nombre']}")
+        minimo = sum(d.get("cuota_fija") or d["saldo"] * d["tasa_mensual"] for d in deudas
+                     if not (d.get("en_mora") and "cuota_fija" not in d))
         print(f"  Deuda {cop(total)}; intereses al mes {cop(interes)}")
-        for plazo in (60, 84):
-            req = sum(cuota_credito(d["saldo"], d["tasa_mensual"], plazo) for d in deudas)
-            print(f"  Para salir en {plazo} meses se necesitan {cop(req)}/mes")
+        for d in deudas:
+            if d.get("cuota_fija"):
+                print(f"  Cuota {d['nombre'].split(' (')[0]}: {cop(d['cuota_fija'])}"
+                      f" ({d['plazo_meses']} meses)")
+        print(f"  Pago mínimo para no atrasarse con nadie: {cop(minimo)}/mes"
+              + ("  (el banco sigue sin pagarse)" if any(d.get("en_mora") and "cuota_fija" not in d
+                                                       for d in deudas) else ""))
         for p in pagos:
             meses, int_total, _ = simular(deudas, p)
             txt = "NUNCA se paga" if meses is None else \

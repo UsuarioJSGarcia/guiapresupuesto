@@ -1,37 +1,137 @@
 {
   "moneda": "COP",
   "ingresos": [
-    {"nombre": "Salario neto - Bancolombia (libre uso)", "monto": 4500000, "libre_uso": true},
-    {"nombre": "Salario neto - tarjeta bono (solo compras; retiro cuesta ~5.000)", "monto": 1400000, "libre_uso": false}
+    {
+      "nombre": "Salario neto - Bancolombia (libre uso)",
+      "monto": 4500000,
+      "libre_uso": true
+    },
+    {
+      "nombre": "Salario neto - tarjeta bono (solo compras; retiro cuesta ~5.000)",
+      "monto": 1400000,
+      "libre_uso": false
+    }
   ],
   "gastos_fijos": [
-    {"nombre": "Arriendo", "monto": 900000, "medio": "efectivo"},
-    {"nombre": "Servicios públicos + internet", "monto": 500000, "medio": "efectivo"},
-    {"nombre": "Transporte", "monto": 300000, "medio": "efectivo"},
-    {"nombre": "Celular", "monto": 500000, "medio": "efectivo"},
-    {"nombre": "Mercado", "monto": 1000000, "medio": "bono"}
+    {
+      "nombre": "Arriendo",
+      "monto": 900000,
+      "medio": "efectivo"
+    },
+    {
+      "nombre": "Servicios públicos + internet",
+      "monto": 500000,
+      "medio": "efectivo"
+    },
+    {
+      "nombre": "Transporte",
+      "monto": 300000,
+      "medio": "efectivo"
+    },
+    {
+      "nombre": "Celular",
+      "monto": 500000,
+      "medio": "efectivo"
+    },
+    {
+      "nombre": "Mercado",
+      "monto": 1000000,
+      "medio": "bono"
+    }
   ],
   "recortes_posibles": [
-    {"nombre": "Plan de celular a ~100.000", "ahorro": 400000}
+    {
+      "nombre": "Plan de celular a ~100.000",
+      "ahorro": 400000
+    }
   ],
   "deudas": [
-    {"nombre": "Persona natural 4M", "saldo": 4000000, "tasa_mensual": 0.05, "pago_actual": 200000},
-    {"nombre": "Jonathan tramo 30M", "saldo": 30000000, "tasa_mensual": 0.035, "pago_actual": 1050000},
-    {"nombre": "Brandon 40M", "saldo": 40000000, "tasa_mensual": 0.0333, "pago_actual": 1332000},
-    {"nombre": "Jonathan tramo 10M", "saldo": 10000000, "tasa_mensual": 0.025, "pago_actual": 250000},
-    {"nombre": "Tarjeta de crédito (tasa >2%, se asume 2,3%)", "saldo": 4000000, "tasa_mensual": 0.023, "pago_actual": 0},
-    {"nombre": "Banco EN MORA (capital 80M; cobran 140M)", "saldo": 140000000, "tasa_mensual": 0.02, "pago_actual": 0, "en_mora": true}
+    {
+      "nombre": "Persona natural 4M",
+      "saldo": 4000000,
+      "tasa_mensual": 0.05,
+      "pago_actual": 200000
+    },
+    {
+      "nombre": "Jonathan tramo 30M",
+      "saldo": 30000000,
+      "tasa_mensual": 0.035,
+      "pago_actual": 1050000
+    },
+    {
+      "nombre": "Brandon 40M",
+      "saldo": 40000000,
+      "tasa_mensual": 0.0333,
+      "pago_actual": 1332000
+    },
+    {
+      "nombre": "Jonathan tramo 10M",
+      "saldo": 10000000,
+      "tasa_mensual": 0.025,
+      "pago_actual": 250000
+    },
+    {
+      "nombre": "Tarjeta de crédito (tope usura oct-2026 ~2,12%)",
+      "saldo": 4000000,
+      "tasa_mensual": 0.0212,
+      "pago_actual": 0
+    },
+    {
+      "nombre": "Banco vivienda EN MORA (capital 80M; cobran 140M)",
+      "saldo": 140000000,
+      "tasa_mensual": 0.02,
+      "pago_actual": 0,
+      "en_mora": true
+    }
   ],
   "escenarios_negociacion": [
-    {"nombre": "1. Nada cambia (tasas actuales, banco cobra 140M)",
-     "ajustes": {}},
-    {"nombre": "2. Banco acepta solo capital 80M al 1,5%; personas bajan a 2%",
-     "ajustes": {"Banco": {"saldo": 80000000, "tasa_mensual": 0.015},
-                 "Persona": {"tasa_mensual": 0.02}, "Jonathan": {"tasa_mensual": 0.02},
-                 "Brandon": {"tasa_mensual": 0.02}}},
-    {"nombre": "3. Banco 80M al 1,5%; personas al 1% (acuerdo fuerte o insolvencia)",
-     "ajustes": {"Banco": {"saldo": 80000000, "tasa_mensual": 0.015},
-                 "Persona": {"tasa_mensual": 0.01}, "Jonathan": {"tasa_mensual": 0.01},
-                 "Brandon": {"tasa_mensual": 0.01}}}
-  ]
+    {
+      "nombre": "1. Nada cambia (banco 140M sin pagar, personas igual)",
+      "ajustes": {}
+    },
+    {
+      "nombre": "2. Banco reestructura los 140M a 15 años al 1% m.v.; personas igual",
+      "ajustes": {
+        "Banco": {
+          "tasa_mensual": 0.01,
+          "plazo_meses": 180
+        }
+      }
+    },
+    {
+      "nombre": "3. Banco reestructura solo capital 80M a 15 años al 1%; personas igual",
+      "ajustes": {
+        "Banco": {
+          "saldo": 80000000,
+          "tasa_mensual": 0.01,
+          "plazo_meses": 180
+        }
+      }
+    },
+    {
+      "nombre": "4. Escenario 3 + personas llevadas al tope legal de usura (~2,12%)",
+      "ajustes": {
+        "Banco": {
+          "saldo": 80000000,
+          "tasa_mensual": 0.01,
+          "plazo_meses": 180
+        },
+        "Persona": {
+          "tasa_mensual": 0.0212
+        },
+        "Jonathan": {
+          "tasa_mensual": 0.0212
+        },
+        "Brandon": {
+          "tasa_mensual": 0.0212
+        }
+      }
+    }
+  ],
+  "tasa_usura": {
+    "mes": "2026-10",
+    "ea": 0.2859,
+    "mensual_aprox": 0.0212,
+    "fuente": "Superfinanciera, Resolución 1472 de 2026"
+  }
 }
