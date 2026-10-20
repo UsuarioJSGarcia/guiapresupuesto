@@ -4,7 +4,8 @@ GUIAPRESUPUESTAL PROCEDIMIENTOS
 Herramienta personal para ordenar ingresos y gastos y salir de deudas.
 
 - `DIAGNOSTICO.md`: situación actual y plan recomendado.
-- `BANCO_RENEGOCIACION.md`: cómo renegociar la deuda de vivienda en mora, con plantillas y fuentes.
+- `BANCO_RENEGOCIACION.md`: cómo renegociar la deuda en mora con Davivienda, con plantillas y fuentes.
+- `DOCUMENTOS.md`: qué documentos ayudan a tener claridad.
 - `NEGOCIACION.md`: qué hacer con los acreedores personas (tasas por encima de la usura).
 - `INGRESOS_EXTRA.md`: cómo generar más ingresos como ingeniero de software.
 - `datos.json`: ingresos, gastos, deudas y escenarios de negociación. Edítalo con tus números reales.

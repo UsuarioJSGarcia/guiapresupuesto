@@ -1,41 +1,32 @@
 # Guía de negociación
 
-## 1. Banco de vivienda (en mora: capital 80M, cobran 140M)
+## 1. Davivienda (crédito de consumo en mora: capital 80M, cobran 140M)
 El plan completo, con las plantillas listas para enviar, está en **`BANCO_RENEGOCIACION.md`**.
 
 En resumen: no negociar por teléfono → **derecho de petición** escrito → **Defensor del Consumidor Financiero como conciliador** → **Superintendencia Financiera**.
 
-## 2. Jonathan, Brandon y la persona de los 4M (no aceptan bajar la tasa)
+## 2. Jonathan, Brandon y la persona de los 4M
 
-### Lo que dice la ley
-- La **tasa de usura** de octubre de 2026 es **28,59 % E.A.**, alrededor de **2,12 % mensual** (Superfinanciera).
-- **Todas** las tasas que te cobran la superan:
+Son acuerdos entre personas: **se cumplen pagando**. Las tasas no se negocian. La única forma de pagar menos intereses es **abonar a capital**: el interés de cada mes se calcula sobre lo que quede debiendo (si de 80 pasas a deber 70, el interés se calcula sobre 70).
 
-| Deuda | Tasa | Equivale al año | ¿Supera la usura? |
+### Regla: cada abono va a la deuda con la tasa más alta
+| Orden | Deuda | Tasa | Lo que te ahorras al mes por cada $1.000.000 abonado |
 |---|---|---|---|
-| Persona 4M | 5 % | 79,6 % | Sí, casi 3 veces |
-| Jonathan 30M | 3,5 % | 51,1 % | Sí |
-| Brandon 40M | 3,33 % | 48,2 % | Sí |
-| Jonathan 10M | 2,5 % | 34,5 % | Sí |
+| 1 | Persona 4M | 5 % | **$50.000** |
+| 2 | Jonathan 30M | 3,5 % | $35.000 |
+| 3 | Brandon 40M | 3,33 % | $33.300 |
+| 4 | Jonathan 10M | 2,5 % | $25.000 |
 
-- Hoy les pagas **$2.832.000 al mes**. Al tope legal serían unos **$1.781.000**. **Estás pagando ~$1.050.000 al mes por encima de lo que la ley permite cobrar.**
-- Consecuencias legales para quien cobra por encima de la usura:
-  - **Pérdida de los intereses cobrados en exceso, más una suma igual como sanción** (Art. 72 de la Ley 45 de 1990, en relación con el Art. 884 del Código de Comercio). Según la jurisprudencia, aplica sobre intereses **ya pagados**, así que lo que ya les has pagado de más podría ser reclamable.
-  - **Usura es delito** (Art. 305 del Código Penal).
+- **Primero, la deuda de 4M al 5 %.** Al terminar de pagarla, te quedan **$200.000 libres cada mes** para seguir abonando a Jonathan (30M).
+- Cuando acabes una, la plata que se iba en sus intereses pasa como abono a la siguiente. Así cada mes se avanza más rápido (efecto bola de nieve).
+- Todo ingreso extra (freelance, prima, ventas) va directo como abono a la deuda que toque en el orden.
 
-### Cómo usar esto (con cuidado)
-Que ellos "no negocien" no significa que no exista otra salida. Pero esto **se maneja con abogado** y sabiendo que la relación personal puede romperse.
-
-1. **Llevar un registro de todo lo que les has pagado**: fechas, montos y comprobantes. Es la prueba.
-2. **Consulta con un abogado** o con un **consultorio jurídico universitario (gratis)**: con los comprobantes pueden calcular cuánto pagaste en exceso y recomendarte el camino.
-3. Con esa asesoría, una **conversación o carta firme pero respetuosa**:
-   > "Quiero seguir pagándote lo que te debo. Pero me asesoré y las tasas pactadas superan el máximo legal. Te propongo que de aquí en adelante liquidemos con la tasa máxima legal vigente y que los pagos hechos de más se abonen al capital."
-4. **Si no hay acuerdo y llegas a cumplir los requisitos**, en la **insolvencia de persona natural** el acuerdo aprobado por la mayoría de acreedores los obliga aunque voten en contra (ver `BANCO_RENEGOCIACION.md`).
-
-**No dejes de pagarles por decisión propia sin asesoría.** Si tienen pagarés o letras firmadas, pueden demandarte y pedir embargo del sueldo.
+### Buenas prácticas
+- Pagar **siempre a tiempo** los intereses: así se mantiene la confianza.
+- Avisar cada abono por escrito ("Te abono $X a capital; ahora quedo debiendo $Y") y guardar el comprobante, para que ambos lleven la misma cuenta del saldo.
 
 ## 3. Asesoría gratuita
-- **Consultorios jurídicos de universidades**: gratis.
+- **Consultorios jurídicos de universidades**: gratis (para el tema de Davivienda).
 - **Defensor del Consumidor Financiero** del banco: gratis.
 - **Superintendencia Financiera**: quejas contra el banco.
-- **Superintendencia de Industria y Comercio**: quejas por cobranza abusiva (Ley 2300 de 2023).
+- **Superintendencia de Industria y Comercio**: quejas por cobranza abusiva del banco (Ley 2300 de 2023).

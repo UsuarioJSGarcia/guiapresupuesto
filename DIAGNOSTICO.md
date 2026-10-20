@@ -27,28 +27,28 @@ Hoy pagas a las personas más de lo que te queda en la cuenta. Ese hueco de ~$53
 | Brandon | $40.000.000 | 3,33 % | 48,2 % | $1.332.000 | Al día (solo intereses) |
 | Jonathan, tramo 10M | $10.000.000 | 2,50 % | 34,5 % | $250.000 | Al día (solo intereses) |
 | Tarjeta de crédito | $4.000.000 | ~2,12 % (tope de usura) | 28,6 % | ~$85.000 | ? |
-| **Banco de vivienda** | **$140.000.000** cobrados (capital 80M) | ? | | | **En mora, no se paga nada** |
+| **Davivienda (crédito de consumo)** | **$140.000.000** cobrados (capital 80M) | ? | | | **En mora, no se paga nada** |
 | **Total** | **$228.000.000** | | | | |
 
-- La **tasa de usura** de octubre de 2026 es **28,59 % E.A. (~2,12 % mensual)**. **Todas las deudas con personas la superan.** Estás pagando **~$1.050.000 al mes por encima del máximo legal**.
+- Con las personas, la única forma de pagar menos interés es **abonar a capital**. Cada $1.000.000 abonado a la deuda del 5 % ahorra $50.000 al mes.
 - La deuda del banco **crece cada mes** sin que se abone nada.
 
 ## 3. La conclusión honesta
 
-Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escenario funciona sin más ingresos**. Aun si el banco reestructura, la cuota del banco más los intereses de las personas superan lo que tienes.
+Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escenario funciona sin más ingresos**.
 
 | Escenario | Pago mínimo mensual para no atrasarse con nadie | Con $4,7M/mes | Con $6,7M/mes |
 |---|---|---|---|
-| 1. Nada cambia | $2,92M (y el banco sigue creciendo) | nunca | 5,7 años |
-| 2. Banco reestructura los **140M** a 15 años al 1 % | **$4,60M** | 9,7 años | 4 años |
-| 3. Banco reestructura solo el **capital de 80M** a 15 años al 1 % | **$3,88M** | 5,1 años | 2,8 años |
-| 4. Escenario 3 + personas al tope legal de usura | **$2,83M** | 4,2 años | 2,6 años |
+| 1. Nada cambia | $2,92M (y Davivienda sigue creciendo) | nunca | 5,7 años |
+| 2. Davivienda reestructura los **140M** a 84 meses al 1,8 % | **$6,16M** | nunca | 5,6 años |
+| 3. Davivienda reestructura solo el **capital de 80M** a 84 meses al 1,8 % | **$4,77M** | 10,2 años | 3,2 años |
+| 4. Escenario 3 + ya pagada la deuda de 4M al 5 % | **$4,57M** | 7,5 años | 3,1 años |
 
-*Los $4,7M y $6,7M suponen $2M o $4M de ingreso extra al mes.*
+*Los $4,7M y $6,7M suponen $2M o $4M de ingreso extra al mes. El 1,8 % y los 84 meses de Davivienda son supuestos.*
 
 **Lo que define todo:**
-1. **Que el banco cobre sobre el capital (80M) y no sobre 140M.** La diferencia es de ~$720.000 al mes en la cuota. Ver `BANCO_RENEGOCIACION.md`.
-2. **Bajar lo que pagas a las personas al máximo legal.** Son ~$1,05M al mes. Ver `NEGOCIACION.md`.
+1. **Que Davivienda vuelva la deuda al capital (80M)**: la cuota baja de $3,2M a $1,85M. Ver `BANCO_RENEGOCIACION.md`.
+2. **Abonar a capital a las personas**, empezando por la deuda de 4M al 5 %. Ver `NEGOCIACION.md`.
 3. **Subir ingresos al menos $2M al mes.** Ver `INGRESOS_EXTRA.md`.
 
 ## 4. Plan por etapas
@@ -57,28 +57,24 @@ Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escen
 - [ ] **Celular de $500.000 a ~$100.000.**
 - [ ] Usar los **$400.000 que sobran del bono**.
 - [ ] **No pedir más préstamos** para pagar intereses.
-- [ ] Revisar en [Consulta de Procesos](https://consultaprocesos.ramajudicial.gov.co/) si hay **demanda judicial** del banco.
-- [ ] Empezar a **guardar todos los comprobantes** de lo que les pagas a las personas.
+- [ ] Revisar en [Consulta de Procesos](https://consultaprocesos.ramajudicial.gov.co/) si hay **demanda judicial** de Davivienda.
+- [ ] Consultar gratis **DataCrédito y TransUnion**: fecha de inicio de la mora y quién figura como acreedor.
 
-### Etapa 1. Próximas 2 semanas: el banco
+### Etapa 1. Próximas 2 semanas: Davivienda
 - [ ] Enviar el **derecho de petición** (plantilla en `BANCO_RENEGOCIACION.md`).
 - [ ] Si a los 15 días hábiles no hay respuesta útil, enviar la **solicitud de conciliación al Defensor del Consumidor Financiero**.
 
-### Etapa 2. Paralelo: asesoría legal gratuita
-- [ ] Ir a un **consultorio jurídico universitario** con: los comprobantes de pago a las personas, la respuesta del banco y la lista de deudas. Hay que evaluar:
-  - El reclamo por **usura** a las personas.
-  - La revisión de la **liquidación del banco**.
+### Etapa 2. Paralelo: asesoría para Davivienda
+- [ ] Ir a un **consultorio jurídico universitario (gratis)** con la respuesta de Davivienda y el reporte de las centrales. Allí revisan:
+  - La **liquidación de Davivienda** y una posible **prescripción**, si lleva más de 3 años sin demanda.
   - Si aplica la **insolvencia de persona natural**.
 
 ### Etapa 3. Ingresos
 - [ ] Ver `INGRESOS_EXTRA.md`. Meta: **+$2M al mes**.
 
 ## 5. Datos que faltan
-- **¿Cuál es el banco?** Con eso busco sus canales oficiales exactos (correo de peticiones, Defensor del Consumidor Financiero).
-- **¿Es un crédito hipotecario o un leasing habitacional?** ¿De qué año es el crédito?
-- **¿Sobre qué inmueble es?** ¿Quién vive ahí? ¿Cuánto vale aproximadamente? (Pagas arriendo aparte.)
-- ¿Cuántos meses lleva en mora? ¿Ha llegado alguna **notificación de juzgado**?
-- ¿Hay **codeudores**?
+- **¿Desde qué fecha está en mora con Davivienda?** ¿Ha llegado alguna **notificación de juzgado**?
+- **¿Qué tipo de crédito es?** ¿Libre inversión, rotativo, libranza? ¿Hay **codeudor**?
+- **¿La tarjeta de crédito es de Davivienda o de otro banco?** ¿Está al día?
 - ¿Cómo estás cubriendo hoy los ~$532.000 que faltan cada mes?
-- ¿La tarjeta de crédito es del mismo banco? ¿Está al día?
-- ¿Desde cuándo les pagas intereses a las personas? (Sirve para calcular cuánto has pagado por encima de la usura.)
+- Los documentos útiles están en `DOCUMENTOS.md`.

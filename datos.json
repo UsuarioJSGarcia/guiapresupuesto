@@ -77,7 +77,7 @@
       "pago_actual": 0
     },
     {
-      "nombre": "Banco vivienda EN MORA (capital 80M; cobran 140M)",
+      "nombre": "Banco Davivienda (consumo) EN MORA: capital 80M, cobran 140M",
       "saldo": 140000000,
       "tasa_mensual": 0.02,
       "pago_actual": 0,
@@ -86,44 +86,38 @@
   ],
   "escenarios_negociacion": [
     {
-      "nombre": "1. Nada cambia (banco 140M sin pagar, personas igual)",
+      "nombre": "1. Nada cambia (Davivienda 140M sin pagar, personas igual)",
       "ajustes": {}
     },
     {
-      "nombre": "2. Banco reestructura los 140M a 15 años al 1% m.v.; personas igual",
+      "nombre": "2. Davivienda reestructura los 140M a 84 meses al 1,8% m.v.; personas igual",
       "ajustes": {
         "Banco": {
-          "tasa_mensual": 0.01,
-          "plazo_meses": 180
+          "tasa_mensual": 0.018,
+          "plazo_meses": 84
         }
       }
     },
     {
-      "nombre": "3. Banco reestructura solo capital 80M a 15 años al 1%; personas igual",
+      "nombre": "3. Davivienda reestructura solo el capital 80M a 84 meses al 1,8%; personas igual",
       "ajustes": {
         "Banco": {
           "saldo": 80000000,
-          "tasa_mensual": 0.01,
-          "plazo_meses": 180
+          "tasa_mensual": 0.018,
+          "plazo_meses": 84
         }
       }
     },
     {
-      "nombre": "4. Escenario 3 + personas llevadas al tope legal de usura (~2,12%)",
+      "nombre": "4. Escenario 3 + ya se pagó la deuda de 4M al 5% (abono con ingreso extra)",
       "ajustes": {
         "Banco": {
           "saldo": 80000000,
-          "tasa_mensual": 0.01,
-          "plazo_meses": 180
+          "tasa_mensual": 0.018,
+          "plazo_meses": 84
         },
-        "Persona": {
-          "tasa_mensual": 0.0212
-        },
-        "Jonathan": {
-          "tasa_mensual": 0.0212
-        },
-        "Brandon": {
-          "tasa_mensual": 0.0212
+        "Persona natural": {
+          "saldo": 0
         }
       }
     }
