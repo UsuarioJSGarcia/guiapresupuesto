@@ -71,7 +71,13 @@
       "pago_actual": 250000
     },
     {
-      "nombre": "Tarjeta de crédito (tope usura oct-2026 ~2,12%)",
+      "nombre": "Jensi 11M (TASA PENDIENTE)",
+      "saldo": 11000000,
+      "tasa_mensual": 0.0,
+      "pago_actual": 0
+    },
+    {
+      "nombre": "Tarjeta Nubank (tasa supuesta ~2,12%)",
       "saldo": 4000000,
       "tasa_mensual": 0.0212,
       "pago_actual": 0

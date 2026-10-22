@@ -1,6 +1,6 @@
 # Diagnóstico financiero y plan de salida de deudas
 
-*Actualizado: 20 de octubre de 2026. Los números salen de `python3 planificador.py`.*
+*Actualizado: 22 de octubre de 2026. Los números salen de `python3 planificador.py`.*
 
 ## 1. Flujo de caja mensual
 
@@ -26,9 +26,20 @@ Hoy pagas a las personas más de lo que te queda en la cuenta. Ese hueco de ~$53
 | Jonathan, tramo 30M | $30.000.000 | 3,50 % | 51,1 % | $1.050.000 | Al día (solo intereses) |
 | Brandon | $40.000.000 | 3,33 % | 48,2 % | $1.332.000 | Al día (solo intereses) |
 | Jonathan, tramo 10M | $10.000.000 | 2,50 % | 34,5 % | $250.000 | Al día (solo intereses) |
-| Tarjeta de crédito | $4.000.000 | ~2,12 % (tope de usura) | 28,6 % | ~$85.000 | ? |
+| Jensi | $11.000.000 | **pendiente** | | **pendiente** | ? |
+| Tarjeta Nubank | $4.000.000 | ~2,12 % (supuesto) | 28,6 % | ~$85.000 | ? |
 | **Davivienda (crédito de consumo)** | **$140.000.000** cobrados (capital 80M) | ? | | | **En mora, no se paga nada** |
-| **Total** | **$228.000.000** | | | | |
+| **Total** | **$239.000.000** | | | **~$5,7M + Jensi** | |
+
+**Resumen por tipo:**
+
+| Tipo | Deuda |
+|---|---|
+| Personas (Jonathan 40M, Brandon 40M, persona 4M, Jensi 11M) | **$95.000.000** |
+| Tarjeta Nubank | $4.000.000 |
+| Davivienda (lo que cobran) | $140.000.000 *(capital: 80M)* |
+| **Total** | **$239.000.000**, unos 41 meses de sueldo completo |
+| Total si Davivienda se deja en el capital | $179.000.000 |
 
 - Con las personas, la única forma de pagar menos interés es **abonar a capital**. Cada $1.000.000 abonado a la deuda del 5 % ahorra $50.000 al mes.
 - La deuda del banco **crece cada mes** sin que se abone nada.
@@ -75,6 +86,7 @@ Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escen
 ## 5. Datos que faltan
 - **¿Desde qué fecha está en mora con Davivienda?** ¿Ha llegado alguna **notificación de juzgado**?
 - **¿Qué tipo de crédito es?** ¿Libre inversión, rotativo, libranza? ¿Hay **codeudor**?
-- **¿La tarjeta de crédito es de Davivienda o de otro banco?** ¿Está al día?
+- **Jensi (11M):** ¿qué tasa mensual te cobra y cuánto le pagas al mes?
+- **Tarjeta Nubank:** ¿está al día? ¿Cuál es el pago mínimo?
 - ¿Cómo estás cubriendo hoy los ~$532.000 que faltan cada mes?
 - Los documentos útiles están en `DOCUMENTOS.md`.
