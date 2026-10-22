@@ -16,7 +16,7 @@
 | Intereses que pagas a las personas | **-$3.032.000** | |
 | **Hueco mensual** | **-$732.000** | |
 
-Hoy pagas a las personas más de lo que te queda en la cuenta. Ese hueco de ~$732.000 al mes se está cubriendo con algo (¿tarjeta, préstamos, atrasos?) y hace que la deuda crezca.
+Hoy pagas a las personas más de lo que te queda en la cuenta. Ese hueco de ~$732.000 al mes hoy se cubre **pidiendo prestado otra vez**, y eso hace que la deuda crezca.
 
 ## 2. Deudas
 
@@ -61,7 +61,7 @@ Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escen
 **Lo que define todo:**
 1. **Que Davivienda vuelva la deuda al capital (80M)**: la cuota baja de $3,2M a $1,85M. Ver `BANCO_RENEGOCIACION.md`.
 2. **Abonar a capital a las personas**, empezando por Jensi (3,64 %). Ver `NEGOCIACION.md`.
-3. **Subir ingresos al menos $2M al mes.** Ver `INGRESOS_EXTRA.md`.
+3. **Subir ingresos al menos $2,3M al mes.** Ver `INGRESOS_EXTRA.md`.
 
 ## 4. Plan por etapas
 
@@ -88,5 +88,4 @@ Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escen
 - **¿Desde qué fecha está en mora con Davivienda?** ¿Ha llegado alguna **notificación de juzgado**?
 - **¿Qué tipo de crédito es?** ¿Libre inversión, rotativo, libranza? ¿Hay **codeudor**?
 - **Tarjeta Nubank:** ¿está al día? ¿Cuál es el pago mínimo?
-- ¿Cómo estás cubriendo hoy los ~$732.000 que faltan cada mes?
 - Los documentos útiles están en `DOCUMENTOS.md`.

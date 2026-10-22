@@ -3,6 +3,7 @@ GUIAPRESUPUESTAL PROCEDIMIENTOS
 
 Herramienta personal para ordenar ingresos y gastos y salir de deudas.
 
+- `RESUMEN_COMPLETO.md`: todo el proyecto y la conversación en un solo documento.
 - `DIAGNOSTICO.md`: situación actual y plan recomendado.
 - `BANCO_RENEGOCIACION.md`: cómo renegociar la deuda en mora con Davivienda, con plantillas y fuentes.
 - `DOCUMENTOS.md`: qué documentos ayudan a tener claridad.
