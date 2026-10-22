@@ -82,7 +82,7 @@ Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escen
   - Si aplica la **insolvencia de persona natural**.
 
 ### Etapa 3. Ingresos (ver metas en `INGRESOS_EXTRA.md`)
-- [ ] Ver `INGRESOS_EXTRA.md`. Meta: **+$2M al mes**.
+- [ ] Meta mínima: **+$2,3M al mes** (equilibrio). Meta de tranquilidad: **+100 %**.
 
 ## 5. Datos que faltan
 - **¿Desde qué fecha está en mora con Davivienda?** ¿Ha llegado alguna **notificación de juzgado**?
