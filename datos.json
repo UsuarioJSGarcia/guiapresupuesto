@@ -47,10 +47,10 @@
   ],
   "deudas": [
     {
-      "nombre": "Persona natural 4M",
-      "saldo": 4000000,
-      "tasa_mensual": 0.05,
-      "pago_actual": 200000
+      "nombre": "Jensi 11M",
+      "saldo": 11000000,
+      "tasa_mensual": 0.03636,
+      "pago_actual": 400000
     },
     {
       "nombre": "Jonathan tramo 30M",
@@ -69,12 +69,6 @@
       "saldo": 10000000,
       "tasa_mensual": 0.025,
       "pago_actual": 250000
-    },
-    {
-      "nombre": "Jensi 11M (TASA PENDIENTE)",
-      "saldo": 11000000,
-      "tasa_mensual": 0.0,
-      "pago_actual": 0
     },
     {
       "nombre": "Tarjeta Nubank (tasa supuesta ~2,12%)",
@@ -115,14 +109,14 @@
       }
     },
     {
-      "nombre": "4. Escenario 3 + ya se pagó la deuda de 4M al 5% (abono con ingreso extra)",
+      "nombre": "4. Escenario 3 + ya se pagó Jensi (11M al 3,64%) con ingreso extra",
       "ajustes": {
         "Banco": {
           "saldo": 80000000,
           "tasa_mensual": 0.018,
           "plazo_meses": 84
         },
-        "Persona natural": {
+        "Jensi": {
           "saldo": 0
         }
       }
@@ -133,5 +127,12 @@
     "ea": 0.2859,
     "mensual_aprox": 0.0212,
     "fuente": "Superfinanciera, Resolución 1472 de 2026"
-  }
+  },
+  "pagadas": [
+    {
+      "nombre": "Joan 4M al 5%",
+      "fecha": "2026-10-22",
+      "nota": "pago total"
+    }
+  ]
 }
