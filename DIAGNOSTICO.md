@@ -81,7 +81,7 @@ Con lo que te queda ($2,3M, o $2,7M con el recorte del celular), **ningún escen
   - La **liquidación de Davivienda** y una posible **prescripción**, si lleva más de 3 años sin demanda.
   - Si aplica la **insolvencia de persona natural**.
 
-### Etapa 3. Ingresos
+### Etapa 3. Ingresos (ver metas en `INGRESOS_EXTRA.md`)
 - [ ] Ver `INGRESOS_EXTRA.md`. Meta: **+$2M al mes**.
 
 ## 5. Datos que faltan

@@ -1,49 +1,72 @@
-# Plan para generar más ingresos (ingeniero de software, poco tiempo libre)
+# Plan de ingresos adicionales
 
-**Meta: +$2M al mes en 3–6 meses.** Con poco tiempo, hay que buscar **más pago por hora**, no más horas, y evitar cualquier cosa que ponga en riesgo dinero que no tienes.
+*Actualizado: 22 de octubre de 2026. Perfil: ingeniero de software con poco tiempo libre.*
 
-## Evaluación de las ideas
+## 1. Metas: cuánto hay que generar
 
-| Idea | Tiempo hasta ver dinero | Riesgo | Veredicto |
+Hoy se pide prestado cada mes para cubrir los gastos, porque **lo que sale es mayor que lo que entra**. Las metas, de menor a mayor:
+
+| Nivel | Qué logra | Ingreso extra necesario al mes | Respecto al sueldo actual ($5,9M) |
 |---|---|---|---|
-| **Bot de trading en bolsa** | Incierto | **Alto**: necesita capital que hoy no tienes y la mayoría de bots pierden contra el mercado | ❌ **No ahora** |
-| **Videos / contenido en redes** | 6–12 meses para monetizar | Bajo en dinero, alto en tiempo | ⚠️ Solo como complemento |
-| **Automatizaciones con IA para negocios** | 1–2 meses | Bajo | ✅ **Sí: rápido y usa tu perfil** |
-| **Trabajo remoto en dólares** | 1–3 meses | Bajo | ✅ **Sí: el de mayor impacto** |
+| **1. Dejar de pedir prestado** | Cubrir gastos e intereses de Jensi, Jonathan, Brandon y Nubank. Davivienda sigue sin pagarse. | **+$820.000** (+$420.000 si bajas el celular) | +14 % |
+| **2. Equilibrio real** | Lo anterior + una cuota de Davivienda reestructurada (~$1,85M, si aceptan dejarla en 80M) | **+$2.300.000** (con el recorte del celular) | +39 % |
+| **3. +50 %** | Equilibrio + abonos a capital | **+$2.950.000** | +50 % |
+| **4. +100 %** | Salir de deudas rápido | **+$5.900.000** | +100 % |
 
-**Sobre el trading:** un bot no crea dinero. Necesita capital para operar y, con deudas al 3–5 % mensual, cualquier peso libre rinde más pagando deuda que en la bolsa. Además, perder ese capital empeoraría todo. Se puede retomar como proyecto cuando estés sin deudas.
+**Cuánto tardarías en quedar sin deudas** (si Davivienda reestructura el capital de 80M a 84 meses al 1,8 %, que es un supuesto):
 
-## ✅ Opción 1. Servicios de automatización con IA para negocios
-Hoy los negocios pequeños pagan por esto y tú lo puedes construir rápido con IA:
-- **Chatbot de WhatsApp** que responde clientes, agenda citas y toma pedidos. Para restaurantes, consultorios, peluquerías, tiendas.
-- **Automatización de procesos**: facturas, reportes en Excel o Google Sheets, correos, inventarios.
-- **Páginas web + agente de IA** para captar clientes.
+| Ingreso extra | Para deudas al mes | Sin deudas en | Intereses totales |
+|---|---|---|---|
+| +$0 a +$1,9M | $2,7M–$4,6M | **nunca o más de 30 años** | — |
+| **+50 % (+$2,95M)** | $5,65M | **~5 años** | ~$165M |
+| **+100 % (+$5,9M)** | $8,6M | **~2,3 años** | ~$65M |
 
-**Modelo:** instalación ($1–3M) + **mensualidad** de mantenimiento ($150–400 mil por cliente). **5–8 clientes con mensualidad = +$1–2M al mes recurrentes**, con poco tiempo una vez montado.
+👉 Por debajo del nivel 2, la deuda no baja. **La meta mínima realista es el nivel 2 (+$2,3M) y la meta de tranquilidad es el nivel 4 (+100 %).**
 
-**Primeros pasos:**
-1. Construir **una solución base** (chatbot de WhatsApp) que se reuse para todos los clientes.
-2. Ofrecerla primero a **negocios conocidos** (familia, barrio, amigos) con descuento a cambio de testimonio.
-3. Publicar casos en LinkedIn, Instagram y TikTok. **Aquí sí entra el contenido en video**: mostrar lo que haces atrae clientes.
+*Para simular otro monto: `python3 planificador.py 6000000`.*
 
-## ✅ Opción 2. Trabajo remoto pagado en dólares
-Un ingeniero de software que trabaja remoto para empresas del exterior suele ganar bastante más que en el mercado local. Puede ser el doble o más, según experiencia e inglés. Es lo único que cambia el plan de años a meses.
-1. CV en inglés + LinkedIn ("Open to work: remote").
-2. Aplicar en LinkedIn (filtro Remote), Turing, Toptal, Arc.dev, Torre.ai, Revelo, BairesDev, Globant y Endava.
-3. **5 aplicaciones por semana** (30 min al día).
+## 2. Qué camino da esos montos
 
-## ⚠️ Opción 3. Contenido en redes (complemento)
-Hacerlo **sobre lo que ya haces** (automatizaciones con IA y programación) para atraer clientes de la Opción 1, no como fuente principal de ingreso.
+Dólar de referencia: **TRM ~$3.175** (19-oct-2026). USD 1.000 ≈ $3,2M.
 
-## Qué hacer con el dinero extra
-**Todo** va al plan de deudas, según `DIAGNOSTICO.md`. Para simular:
-```bash
-python3 planificador.py 4700000   # 2,7M + 2M de ingreso extra
-```
+| Camino | Ingreso extra típico | Tiempo hasta cobrar | Horas extra | ¿Alcanza el nivel…? |
+|---|---|---|---|---|
+| **A. Cambiar a un trabajo remoto en dólares** | Un sueldo de USD 3.500–5.000 = **$11–16M** frente a los $5,9M de hoy | 1–3 meses de búsqueda | Solo las de la búsqueda (~5 h/semana) | **4 (+100 %)** |
+| **B. Contrato freelance por horas, en dólares** (10–15 h/semana a USD 25–40/h) | **$3–7M** | 1–2 meses | 10–15 h/semana | **3 o 4** |
+| **C. Automatizaciones con IA para negocios locales** | **$1–3M** (instalación + mensualidades) | 1–2 meses | 5–8 h/semana | **1 o 2** |
+| D. Bot de trading / contenido en redes | Incierto | 6–12 meses o más | Muchas | No por ahora |
 
-## Lo que puedo construir contigo
-Dime por cuál empezamos y lo armo en este repositorio:
-- **Plantilla de chatbot de WhatsApp con IA** lista para adaptar a cada negocio.
-- **Página web/portafolio** para ofrecer tus servicios, con precios y casos.
-- **Propuesta comercial y mensaje** para ofrecer el servicio a negocios.
-- **CV en inglés + perfil de LinkedIn/Upwork.** Para esto necesito tu experiencia: empresas, años, tecnologías y nivel de inglés.
+**Recomendación:** **A como prioridad** (el único que duplica el ingreso sin sumar horas) y **C en paralelo** (da dinero más rápido mientras sale A). Si A se demora, **B**.
+
+Rangos de referencia del mercado: el pago real depende de tu experiencia, tu stack y tu nivel de inglés.
+
+## 3. Plan de 90 días
+
+### Semanas 1–2: preparar
+- [ ] **CV en inglés y en español**, enfocado en logros con números.
+- [ ] **LinkedIn** en inglés: titular, "Acerca de", proyectos y "Open to work: Remote".
+- [ ] Perfil en **Upwork / Workana** y en plataformas de talento remoto: Turing, Arc.dev, Torre.ai, Revelo, BairesDev.
+- [ ] **Plantilla de chatbot de WhatsApp con IA** (producto base para la ruta C).
+- [ ] **Página web sencilla** con tus servicios y precios.
+
+### Semanas 3–8: buscar y vender
+- [ ] **Ruta A:** 5–10 aplicaciones por semana. Responder las entrevistas el mismo día.
+- [ ] **Ruta C:** ofrecer el chatbot a 3–5 negocios por semana (conocidos, barrio, redes). Meta: **2 clientes**.
+- [ ] Practicar entrevistas técnicas 2–3 h por semana.
+
+### Semanas 9–12: cerrar
+- [ ] **Ruta A:** negociar la oferta. Antes de renunciar, confirmar contrato, forma de pago y cómo te llega la plata a Colombia.
+- [ ] **Ruta C:** 3–5 clientes con mensualidad.
+- [ ] **Todo el ingreso extra va al plan de deudas:** primero Jensi, luego Jonathan 30M, luego Brandon.
+
+### Tiempo total: ~8–10 horas por semana
+Por ejemplo, 1 hora de lunes a viernes y 3–5 horas el fin de semana.
+
+## 4. Lo que yo hago por ti
+Tú solo tienes que aplicar, ir a las entrevistas y hablar con los clientes. Yo preparo:
+
+1. **CV en inglés y en español + perfil de LinkedIn.** Necesito: empresas, cargos, años, tecnologías, logros o proyectos destacados, estudios y nivel de inglés.
+2. **Plantilla de chatbot de WhatsApp con IA**, reutilizable para cada cliente.
+3. **Página web de servicios** con precios.
+4. **Propuesta comercial y mensajes** para ofrecer el servicio.
+5. **Lista de vacantes y empresas** que se ajusten a tu perfil.
